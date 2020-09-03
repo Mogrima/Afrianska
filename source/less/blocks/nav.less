@@ -1,0 +1,81 @@
+.nav {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.nav__toggle {
+  display: block;
+  background-color: @c_light_text;
+  cursor: pointer;
+  border: none;
+}
+
+.nav--closed .nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 7px;
+  left: 4px;
+
+  width: 24px;
+  height: 3px;
+
+  background-color: #356EAD;
+  box-shadow: 0 8px 0 0 #356EAD, 0 16px 0 0 #356EAD;
+}
+
+.nav--closed .nav__toggle:hover::before {
+  background-color: saturate(#356EAD, 80%);
+  box-shadow: 0 8px 0 0 saturate(#356EAD, 80%), 0 16px 0 0 saturate(#356EAD, 80%);
+}
+
+.nav--opened .nav__toggle {
+  width: 18px;
+  height: 18px;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 15px;
+    left: -5px;
+
+    width: 24px;
+    height: 3px;
+
+    background-color: #356EAD;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__link {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  color: @c_main_text;
+  text-decoration: none;
+}
+
+.nav--closed .nav__item,
+.nav--nojs .nav__toggle {
+  display: none;
+}
+
+.nav--opened .nav__item,
+.nav--nojs .nav__item {
+  display: block;
+}
