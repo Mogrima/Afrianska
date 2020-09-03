@@ -67,7 +67,7 @@ gulp.task("svg", function () {
 
 gulp.task("scripts", function() {
   return gulp.src("source/js/main.js")
-      .pipe(uglify())
+      // .pipe(uglify())
       .pipe(rename({ suffix: '.min' }))
       .pipe(gulp.dest("build/js"));
 });
