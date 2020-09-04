@@ -1,0 +1,148 @@
+.footer {
+  background-color: @bg_dark;
+  &--bg-light {
+    background-color: @c_light_text;
+  }
+}
+
+.footer__wrapper {
+  width: 1270px;
+  box-sizing: border-box;
+  padding: 94px 320px 64px 214px;
+  background-color: @bg_dark_wrapper;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.footer__contacts {
+  width: 299px;
+}
+
+.footer__logo-img {
+  width: 188px;
+  height: 48px;
+  margin-bottom: 24px;
+}
+
+.footer__contacts-item {
+  display: flex;
+  margin-bottom: 19px;
+  font-style: normal;
+  color: @c_light_text;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer__litera {
+  margin-right: 18px;
+}
+
+.footer__subtitle {
+  margin: 0;
+  margin-bottom: 32px;
+  font-size: 20px;
+  line-height: 30px;
+  color: @c_light_text;
+}
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__item {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer__link {
+  color: @c_light_text;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer__copyright {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.05em;
+}
+
+@media(min-width: @lg-width) {
+  .footer__wrapper {
+    width: 93%;
+    padding-left: 15%;
+  }
+}
+
+@media(max-width: @desktop-width) {
+  .footer__wrapper {
+    width: 93%;
+    padding-right: 145px;
+    padding-left: 149px;
+  }
+}
+
+@media(max-width: @tablet-width) {
+  .footer__wrapper {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media(max-width: @mobile-width) {
+  .footer__wrapper {
+    width: 100%;
+    padding-top: 56px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer__top {
+    flex-direction: column;
+  }
+
+  .footer__contacts {
+    width: 257px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .footer__block {
+    width: 299px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .footer__subtitle {
+    margin-bottom: 16px;
+  }
+
+  .footer__item {
+    margin-bottom: 8px;
+  }
+
+  .footer__copyright {
+    text-align: center;
+  }
+}
