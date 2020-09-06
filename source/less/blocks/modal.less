@@ -23,7 +23,7 @@
     content: "";
     position: absolute;
     top: 21px;
-    right: 0;
+    right: 28px;
     width: 2px;
     height: 26px;
     background-color: #000000;
@@ -37,6 +37,27 @@
   }
 }
 
+.modal__submit {
+  top: 20vw;
+  left: calc(50vw - 178px);
+  padding: 40px;
+}
+
+.modal__submit-title {
+  font-size: 24px;
+}
+
 .modal__show {
   display: flex;
+}
+
+@media(max-width: @mobile-width) {
+  .modal {
+    left: calc(50vw - 170px);
+  }
+
+  .modal__submit {
+    padding: 20px;
+    top: 50vw;
+  }
 }
