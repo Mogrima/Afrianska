@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			forms[i].appendChild(statusMessage);
 
 			const fData = new FormData(forms[i]);
-			console.log(fData);
 
 			try {
 				await postData('mail.php', fData)
