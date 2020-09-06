@@ -1,0 +1,29 @@
+.map__wrapper {
+  margin: 96px 0;
+  padding: 0 213px;
+}
+
+.map__image {
+  width: 100%;
+  height: 480px;
+}
+
+.map__block {
+  display: none;
+
+  &--no-js {
+    display: block;
+  }
+}
+
+@media(min-width: @lg-width) {
+  .map__wrapper {
+    padding: 0;
+  }
+}
+
+@media(max-width: @tablet-width) {
+  .map__wrapper {
+      padding: 0;
+  }
+}
