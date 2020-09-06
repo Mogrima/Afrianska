@@ -1,0 +1,21 @@
+.contact-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 214px;
+}
+
+@media(max-width: @desktop-width) {
+  .contact-columns {
+    justify-content: space-around;
+    padding: 0 15.6%;
+    padding: 0;
+  }
+}
+
+@media(max-width: @tablet-width) {
+  .contact-columns {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
