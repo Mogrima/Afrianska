@@ -1,0 +1,42 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 5vw;
+  left: calc(50vw - 290px);
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.modal__wrapper {
+  margin-top: 0;
+}
+
+.modal__close {
+  position: relative;
+  align-self: flex-start;
+  display: block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    right: 0;
+    width: 2px;
+    height: 26px;
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.modal__show {
+  display: flex;
+}
