@@ -13,6 +13,7 @@ var svgmin =  require('gulp-svgmin');
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
+var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
 var include = require("posthtml-include");
 var del = require("del");
@@ -66,7 +67,8 @@ gulp.task("svg", function () {
 });
 
 gulp.task("scripts", function() {
-  return gulp.src("source/js/main.js")
+  return gulp.src("source/js/*.js")
+      .pipe(concat("main.js"))
       // .pipe(uglify())
       .pipe(rename({ suffix: '.min' }))
       .pipe(gulp.dest("build/js"));
@@ -90,6 +92,7 @@ gulp.task("copy", function () {
   "source/fonts/**/*.{woff,woff2}",
   "source/css/normalize.css",
   "source/img/**",
+  "source/handler/**",
   "source/*.ico"
   ], {
   base: "source"
