@@ -6,6 +6,23 @@
   <title>Contact</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=41194236-2233-459b-aeb2-f43bf3e3dc48&lang=ru_RU"></script>
+    <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    /* По умолчанию мобильный макет */
+    background-image: url("maket/ContactUs.png");
+  }
+
+  BODY {
+    opacity: .5;
+  }
+</style>
+<link rel="stylesheet" href="maket/styles.css">
+<script src="maket/script.js"></script>
+<!-- // Pixel Glass -->
 </head>
 <body>
   <div style="display:none">
@@ -33,6 +50,50 @@
         incididunt ut labore et dolore magna aliqua. </p>
     </div>
   </header>
+  <main>
+    <div class="contact-columns">
+      <section class="contacts">
+        <h2 class="visually-hidden">Contact</h2>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <h3 class="contacts__title contacts__title--first">ADDRESS</h3>
+            <address class="contacts__text">Id convallis placerat sit sed duis id amet volutpat quam a, pharetra.</address>
+          </li>
+          <li class="contacts__item">
+            <h3 class="contacts__title">PHONE</h3>
+            <a class="contacts__text contacts__text--icon contacts__text--phone" href="tel:+6281273134321">+62-812-7313-4321</a>
+            <a class="contacts__text contacts__text--icon contacts__text--phone" href="tel:+628170001234">+62-817-000-1234</a>
+          </li>
+          <li class="contacts__item">
+            <h3 class="contacts__title">ONLINE SERVICE</h3>
+            <a class="contacts__text contacts__text--icon contacts__text--site" href="www.afrianska.com">www.afrianska.com</a>
+            <a class="contacts__text contacts__text--icon contacts__text--email" href="mailto:hello.afrian@gmail.com">hello.afrian@gmail.com</a>
+          </li>
+        </ul>
+      </section>
+      <section class="form">
+        <div class="form__wrapper">
+          <h2 class="form__title">SEND US MESSAGE</h2>
+          <form id="feedback" action="#" method="post">
+            <label class="form__label" for="name">Full Name
+            <input id="name" class="form__input" type="text" name="name" placeholder="Your Name" maxlength="20">
+            <span class="error"></span>
+            </label>
+            <label class="form__label" for="email">Email
+              <input id="email" class="form__input" type="email" name="email" placeholder="Your Email" maxlength="32">
+              <span class="error"></span>
+            </label>
+            <label class="form__label" for="massage">Message
+              <textarea id="massage" class="form__input form__massage" name="massage" placeholder="Your Message"
+                maxlength="300"></textarea>
+              <span class="error"></span>
+            </label>
+            <button class="button form__button" type="submit" value="submit">SUBMIT</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
   <footer class="footer footer--bg-light">
     <div class="footer__wrapper">
       <div class="footer__top">
@@ -70,5 +131,16 @@
   </footer>
   <script src="js/picturefill.min.js"></script>
   <script src="js/main.min.js"></script>
+  <script>
+    ymaps.ready(init);
+    var myMap;
+    function init(){
+        var myMap = new ymaps.Map("map", {
+            center: [40.912222, -74.162222],
+            zoom: 13
+        });
+        myMap.behaviors.disable('scrollZoom');
+    }
+  </script>
 </body>
 </html>
