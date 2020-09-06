@@ -69,7 +69,7 @@ gulp.task("svg", function () {
 gulp.task("scripts", function() {
   return gulp.src("source/js/*.js")
       .pipe(concat("main.js"))
-      // .pipe(uglify())
+      .pipe(uglify())
       .pipe(rename({ suffix: '.min' }))
       .pipe(gulp.dest("build/js"));
 });
