@@ -6,23 +6,6 @@
   <title>Contact</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=41194236-2233-459b-aeb2-f43bf3e3dc48&lang=ru_RU"></script>
-    <!-- Pixel Glass -->
-<style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    /* По умолчанию мобильный макет */
-    background-image: url("maket/ContactUs.png");
-  }
-
-  BODY {
-    opacity: .5;
-  }
-</style>
-<link rel="stylesheet" href="maket/styles.css">
-<script src="maket/script.js"></script>
-<!-- // Pixel Glass -->
 </head>
 <body>
   <div style="display:none">
@@ -93,6 +76,25 @@
         </div>
       </section>
     </div>
+    <section class="map">
+      <h2 class="visually-hidden">Our location in the map</h2>
+      <div class="map__wrapper">
+        <div class="map__block map__block--no-js">
+        <img class="map__image" src="img/contact/map.png" alt="our location in the map" width="940" height="480">
+        </div>
+        <div class="map__image" id="map"></div>
+      </div>
+    </section>
+    <section class="team team--bg-light">
+      <div class="team__wrapper">
+        <div class="team__text-content">
+          <h2 class="title title--light team__title">Intersted to woek
+            with our team?</h2>
+          <p class="team__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </div>
+        <button class="button team__button">Let’s Talk</button>
+      </div>
+    </section>
   </main>
   <footer class="footer footer--bg-light">
     <div class="footer__wrapper">
@@ -131,16 +133,5 @@
   </footer>
   <script src="js/picturefill.min.js"></script>
   <script src="js/main.min.js"></script>
-  <script>
-    ymaps.ready(init);
-    var myMap;
-    function init(){
-        var myMap = new ymaps.Map("map", {
-            center: [40.912222, -74.162222],
-            zoom: 13
-        });
-        myMap.behaviors.disable('scrollZoom');
-    }
-  </script>
 </body>
 </html>
