@@ -94,7 +94,7 @@
           <p class="team__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         </div>
-        <button class="button team__button">Let’s Talk</button>
+        <button class="button team__button modal-button">Let’s Talk</button>
       </div>
     </section>
   </main>
@@ -136,6 +136,33 @@
       <p class="footer__copyright">2019 © Afrianska. All rights reserved.</p>
     </div>
   </footer>
+  <section class="form modal">
+    <div class="form__wrapper modal__wrapper">
+      <h2 class="form__title">SEND US MESSAGE</h2>
+      <form id="feedback" class="feedback" action="mail.php" method="post">
+      <input type="hidden" name="Afrianska" value="Afrianska">
+      <input type="hidden" name="admin_email" value="example@example.ru">
+      <input type="hidden" name="form_subject" value="Форма с подвала сайта SiteName">
+      <p class="form__item">
+        <label class="form__label" for="name">Full Name</label>
+      <input id="name" class="form__input" type="text" name="name" placeholder="Your Name" maxlength="20" required="">
+      </p>
+      <p class="form__item">
+      <label class="form__label" for="email">Email</label>
+      <input id="email" class="form__input" type="email" name="email" placeholder="Your Email" maxlength="32" required="">
+    </p>
+    <p class="form__item">
+      <label class="form__label" for="massage">Message</label>
+      <textarea id="massage" class="form__input form__massage" name="massage" placeholder="Your Message" maxlength="300" required=""></textarea>
+      <p class="form__item"></p>
+      <button class="button form__button" type="submit" value="submit">SUBMIT</button>
+    </form>
+    </div>
+    <button class="modal__close"><span class="visually-hidden">Закрыть</span></button>
+  </section>
+  <div class="modal modal__submit">
+    <h3>Сообщение отправлено</h3>
+  </div>
   <script src="js/picturefill.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
