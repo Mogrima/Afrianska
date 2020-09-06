@@ -6,6 +6,7 @@
   <title>Contact</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=41194236-2233-459b-aeb2-f43bf3e3dc48&lang=ru_RU"></script>
 </head>
 <body>
   <div style="display:none">
@@ -133,5 +134,16 @@
   </footer>
   <script src="js/picturefill.min.js"></script>
   <script src="js/main.min.js"></script>
+  <script>
+    ymaps.ready(init);
+    var myMap;
+    function init(){
+        var myMap = new ymaps.Map("map", {
+            center: [40.912222, -74.162222],
+            zoom: 13
+        });
+        myMap.behaviors.disable('scrollZoom');
+    }
+  </script>
 </body>
 </html>
